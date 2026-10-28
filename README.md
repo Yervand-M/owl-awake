@@ -81,9 +81,10 @@ Requires the Xcode Command Line Tools (`xcode-select --install`).
 git clone https://github.com/Yervand-M/owl-awake.git
 cd owl-awake
 ./build.sh
+ditto ".build/Owl Awake.app" "/Applications/Owl Awake.app"
 ```
 
-This produces `Owl Awake.app` (universal: arm64 + x86_64) and `.build/Owl-Awake.zip`.
+The build goes into `.build/`: `Owl Awake.app` (universal: arm64 + x86_64) and `Owl-Awake.zip`.
 
 | File | Purpose |
 |---|---|

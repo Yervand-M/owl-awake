@@ -1,11 +1,13 @@
 #!/bin/zsh
-# Builds "Owl Awake.app" next to this script.
+# Builds .build/Owl Awake.app and .build/Owl-Awake.zip.
+# Output stays in the hidden .build folder so the build copy isn't opened by accident;
+# install by copying it to /Applications.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-APP="Owl Awake.app"
 BUILD=".build"
-rm -rf "$APP" "$BUILD"
+APP="$BUILD/Owl Awake.app"
+rm -rf "$BUILD" "Owl Awake.app"
 mkdir -p "$BUILD" "$APP/Contents/MacOS" "$APP/Contents/Resources"
 
 # App icon
